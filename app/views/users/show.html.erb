@@ -1,0 +1,14 @@
+<form action="session/logout" method="get">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input class='pull-right' type="button" value="Log Out">
+</form>
+
+<h1>Welcome <%= @user.name %></h1>
+<h2>New Secret</h2><br>
+  <form action="/users/secret" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+    <textarea name="content" rows="8" cols="80"></textarea><br>
+    <input type="submit" value="Create Secret"><br>
+  </form>
+
+<h2>Secret</h2>

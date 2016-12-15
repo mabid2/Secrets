@@ -1,0 +1,13 @@
+<h1>Sign Up</h1>
+
+<form action="/users/create" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <label for="email">Email</label>
+  <input type="text" name="user[email]" placeholder="Enter Email"><br>
+  <label for="name">Name</label><input type="text" name="user[name]" placeholder='Enter Name'><br>
+  <label for="password">Password</label><input type="password" name="user[password]" placeholder="Enter password"><br>
+  <label for="passwordconfirmation">Password Confirmation</label>
+  <input type="password" name="confpass" placeholder="Enter Confirmation Password">
+
+  <input type="submit" value="Sign Up">
+</form>
